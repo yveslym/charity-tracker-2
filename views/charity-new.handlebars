@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    
+    <form method="POST" action="/">
+      {{> charity-new-form }}
+      <!-- BUTTON -->
+      <input type="hidden" name="charityId" value="{{charity.ein}}">
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save </button>
+      </div>
+    </form>
+  </div>
+</div>

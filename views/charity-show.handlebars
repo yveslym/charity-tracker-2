@@ -1,0 +1,71 @@
+
+
+<div class='container'>
+    <div class='page-header'>
+        <h1>
+            Selected Donnation
+        </h1>
+
+         <div class="col-sm-4">  
+                   <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://banner2.kisspng.com/20180615/xgg/kisspng-olive-branch-peace-symbols-olive-wreath-olive-5b23d23031d2b6.9040602915290742242041.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{charity.charityName}}</h5>
+                            <p class="card-text">none</p>
+                            {{!-- <a href="{{charity.donationUrl}}" class="btn btn-secondary">Donate</a> --}}
+                            <a href="/new" class="btn btn-primary">Create Track</a>
+                             
+                        </div>
+                    </div>
+            </div>
+    </div>
+
+</div>
+
+
+<div class="container">
+<div class="page-header">
+    <h1>
+        My Donnation
+    </h1>
+</div>
+    {{#each tracks}}
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6">
+
+          {{!-- track card --}}
+
+ <div class="card-body d-flex flex-column">
+            <h1 class="card-title pricing-card-title">$ {{this.amount}} <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>{{this.note}}</li>
+              <li>date</li>
+            </ul>
+            <button type="button" class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto;">Get started</button>
+     </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{!-- donnation tracker form --}}
+<div class='container'>
+    <div class='page-header'>
+        <h1>
+           Create New Donnation Tracker
+        </h1>
+    </div>
+   <div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    
+    <form method="POST" action="/">
+      {{> charity-new-partial }}
+      <!-- BUTTON -->
+      <input type="hidden" name="charityId" value="{{charity.ein}}">
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save </button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

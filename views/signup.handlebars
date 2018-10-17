@@ -1,0 +1,42 @@
+<div class='container'>
+
+
+<form method="POST" action="/user/signup">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+
+{{!-- first name --}}
+
+<div class="form-group">
+    <label for="exampleInputfirstname1">First Name</label>
+    <input type="firstname" class="form-control" id="exampleInputfirstname1" aria-describedby="firstnameHelp" placeholder="Enter firstname">
+    <small id="firstnameHelp" class="form-text text-muted">We'll never share your firstname with anyone else.</small>
+  </div>
+
+  {{!-- last name --}}
+
+<div class="form-group">
+    <label for="exampleInputlastname1">Last Name</label>
+    <input type="lastname" class="form-control" id="exampleInputlastname1" aria-describedby="lastnameHelp" placeholder="Enter lastname">
+    <small id="lastnameHelp" class="form-text text-muted">We'll never share your lastname with anyone else.</small>
+  </div>
+
+  {{!-- user name --}}
+
+<div class="form-group">
+    <label for="exampleInputusername1">Username</label>
+    <input type="username" class="form-control" id="exampleInputusername1" aria-describedby="usernameHelp" placeholder="Enter username">
+    <small id="usernameHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>

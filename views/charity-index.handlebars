@@ -1,0 +1,20 @@
+<h1>Charities </h1>
+  
+    <div class="container">
+        <div class="row">
+            {{#each charities}}
+            <div class="col-sm-4">  
+                   <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://banner2.kisspng.com/20180615/xgg/kisspng-olive-branch-peace-symbols-olive-wreath-olive-5b23d23031d2b6.9040602915290742242041.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.charityName}}</h5>
+                            <p class="card-text">none</p>
+                            <a href="{{this.donationUrl}}" class="btn btn-secondary">Donate</a>
+                            <a href="/{{this.ein}}" class="btn btn-primary">Track</a>
+                             
+                        </div>
+                    </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>  
